@@ -1,0 +1,10 @@
+<h3>hello world! </h3>
+
+<% @spots.each do |spot| %>
+  <ul>
+    <li class='name'><%=spot.company_name %></li>
+    <li>Production ID: <%=spot.prod_ID%></li>
+    <li><%=link_to spot.url%></li>
+  </ul>
+<%end%>
+
