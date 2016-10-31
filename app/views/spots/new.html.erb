@@ -1,0 +1,8 @@
+<%= form_for @spot do |form| %>
+  <ul class="form2">
+    <li><%= form.text_field :company_name, placeholder: "Publisher" %></li>
+    <li><%= form.text_field :prod_ID, placeholder: "Spot ID" %></li>
+    <li><%= form.text_field :url, placeholder: "url" %></li>
+    <li><%= form.submit %></li>
+  </ul>
+<%end%>

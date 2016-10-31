@@ -1,4 +1,5 @@
 class SpotsController < ApplicationController
+  before_action :set_spot, only:[:show, :edit, :update, :destroy]
 
   def index
     @spots = Spot.all
@@ -8,7 +9,7 @@ class SpotsController < ApplicationController
   end
 
   def new
-    @spot.new
+    @spot = Spot.new
   end
 
   def edit
@@ -17,10 +18,19 @@ class SpotsController < ApplicationController
   def create
     @spot = Spot.new(spot_params)
       if @spot.save
-        redirect_to @spot
+        redirect_to :root
       else
         render :action => :new
       end
+  end
+
+  def destroy
+    @spot = Spot.find(params[:id]).destroy
+    redirect_to :root
+  end
+
+  def set_spot
+    @spot = Spot.find(params[:id])
   end
 
   def spot_params

@@ -1,10 +1,10 @@
 <h3>hello world! </h3>
 
+<%= link_to "New Spot", new_spot_path %>
+
 <% @spots.each do |spot| %>
   <ul>
-    <li class='name'><%=spot.company_name %></li>
-    <li>Production ID: <%=spot.prod_ID%></li>
-    <li><%=link_to spot.url%></li>
+    <li class='name'><%= link_to spot.company_name, spot_path(spot.id) %></li>
   </ul>
 <%end%>
 
