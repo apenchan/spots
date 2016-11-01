@@ -24,10 +24,11 @@ class SpotsController < ApplicationController
       end
   end
 
-  def destroy
-    @spot = Spot.find(params[:id]).destroy
-    redirect_to :root
-  end
+  # def destroy
+  #   @spot = Spot.find(params[:id]).destroy
+  #   redirect_to :root
+  # end
+  # Dont want to delete spots
 
   def set_spot
     @spot = Spot.find(params[:id])

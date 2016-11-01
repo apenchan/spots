@@ -1,6 +1,16 @@
 ul {
   list-style-type: none;
 }
+#index{
+  text-align: center;
+}
+li{
+  list-style-type: none;
+}
 .name{
-  font-size: 25px;
+  font-size: 18px;
+  float: left;
+  clear: left;
+  padding: 10px;
+  margin-left: 30px;
 }

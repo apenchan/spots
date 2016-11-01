@@ -1,10 +1,11 @@
-<h3>hello world! </h3>
+<div id="index">
+  <h2>Spot.IM Directory</h2>
+  <%= link_to "Add New Spot", new_spot_path %>
 
-<%= link_to "New Spot", new_spot_path %>
+  <% @spots.each do |spot| %>
 
-<% @spots.each do |spot| %>
-  <ul>
-    <li class='name'><%= link_to spot.company_name, spot_path(spot.id) %></li>
-  </ul>
-<%end%>
+      <li class='name'><%= link_to spot.company_name, spot_path(spot.id) %></li>
+
+  <%end%>
+</div>
 
